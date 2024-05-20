@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="adminpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Admin Panel</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html" target="_blank" onclick="logout()" >Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="admin-container">
+        <h2>Upload Document in pdf format to create/add to database</h2>
+        <div>
+            <label for="fileInput">Select Document:</label>
+            <input type="file" id="fileInput" accept=".pdf" required>
+        </div>
+        <br>
+        <button onclick="uploadFile()">Upload</button>
+        <button onclick="createdb()">Create Database</button>
+        <button onclick="showdb()">Show Database</button>
+        <button onclick="deleteWholeDB()">Delete Database</button>
+        <button onclick="addQAPair()">Add QA Pair</button>
+        
+    </div>
+    <div id="dataDisplay"></div>
+
+    <div class="overlay" id="overlay">
+        <div class="overlay-message" id="overlay-message"></div>
+    </div>
+
+    <script src="adminpage.js"></script>
+</body>
+</html>
